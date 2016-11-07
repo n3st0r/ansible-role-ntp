@@ -1,0 +1,9 @@
+
+---
+
+- name: Install required package
+  apt: pkg={{ item }} state=latest
+  with_items:
+      - ntp
+      - ntp-doc
+
