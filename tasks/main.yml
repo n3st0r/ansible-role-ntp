@@ -9,3 +9,9 @@
   notify:
       - start ntp
 
+
+- name: Create and install the ntp.conf template file
+  template: src=ntp.conf.j2 dest=/etc/ntp.conf backup=yes
+  notify:
+      - restart ntp
+

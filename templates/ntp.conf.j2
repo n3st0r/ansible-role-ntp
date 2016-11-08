@@ -1,0 +1,10 @@
+
+{% for server in ntp_config_server %}
+server {{ server }} iburst
+{% endfor %}
+
+restrict 127.0.0.1
+{% for restrict in ntp_config_restrict %}
+restrict {{ restrict }}
+{% endfor %}
+
