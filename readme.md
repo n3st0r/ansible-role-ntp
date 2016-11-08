@@ -50,6 +50,18 @@ My own ansible role for install and configure ntp/ntpd service role.
 
 ...
 
+ NTP Stats configuration info
+------------------------
+
+### Important:
+Create the /ntpstats directory at /var/log/ntpstats" owned by "ntp".
+
+### Popular options are:
+peerstats - Record peer statistics with one line appended to the peerstats file set each NTP packet or reference clock update
+loopstats - Record clock discipline loop statistics . One line is appended to the loopstats file set each system clock update
+clockstats - Record reference clock statistics with one line appended to the clockstats file set each update received from a reference clock driver
+sysstats   - Record system statistics with one line appended to the sysstats file each hour
+
  License
 ---------
 
