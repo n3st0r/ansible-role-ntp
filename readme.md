@@ -49,6 +49,28 @@ My own ansible role for install and configure ntp/ntpd service role.
             - 192.168.0.0/24 trust
 
 ...
+```
+
+### Install ntp service with custom stats option:
+
+```
+---
+
+- hosts: all
+  roles:
+      - role: ntp
+        ntp_stats_config:
+            - 'statsdir  /var/lib/ntp/stats/'
+            - 'driftfile /var/lib/ntp/ntp.drift'
+            - 'filegen loopstats file loopstats type day enable'
+            - 'filegen peerstats file peerstats type day enable'
+            - 'filegen clockstats file clockstats type day enable'
+            - 'sysstats file sysstats type day enable'
+
+...
+```
+
+
 
  NTP Stats configuration info
 ------------------------
