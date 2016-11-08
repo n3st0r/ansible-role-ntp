@@ -6,4 +6,6 @@
   with_items:
       - ntp
       - ntp-doc
+  notify:
+      - start ntp
 
